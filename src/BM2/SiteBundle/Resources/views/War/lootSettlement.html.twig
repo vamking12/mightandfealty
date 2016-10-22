@@ -41,6 +41,12 @@
 			</ul>
 		</li>
 	{% endif %}
+	
+	{% if result is defined %}
+	<ul>
+	{% if result.peasants is defined %}
+		<li>You have killed {{ result.peasants }} peasants.</li>
+	{% endif %}
 	</ul>
 {% else %}
 	<p>{{ "military.settlement.loot.intro"|trans({},"actions")|raw }}</p>
